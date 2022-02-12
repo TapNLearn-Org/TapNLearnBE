@@ -1,0 +1,16 @@
+[{
+    "name": "Cycling",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/activity/Cycling.jpg"}
+},{
+    "name": "Dancing",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/activity/Dancing.jpg"}
+},{
+    "name": "Hiking",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/activity/Hiking.jpg"}
+},{
+    "name": "Running",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/activity/Running.jpg"}
+},{
+    "name": "Swimming",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/activity/Swimming.jpg"}
+}]

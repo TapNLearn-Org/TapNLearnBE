@@ -1,0 +1,37 @@
+[{
+    "name": "Arrow",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Arrow.jpg"}
+},{
+    "name": "Circle",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Circle.jpg"}
+},{
+    "name": "Cross",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Cross.jpg"}
+},{
+    "name": "Cube",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Cude.jpg"}
+},{
+    "name": "Heart",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Heart.jpg"}
+},{
+    "name": "Hexagon",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Heaxagon.png"}
+},{
+    "name": "Oval",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Oval.png"}
+},{
+    "name": "Pentagon",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Pentagon.jpg"}
+},{
+    "name": "Rectangle",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Rectangle.jpeg"}
+},{
+    "name": "Square",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Square.jpg"}
+},{
+    "name": "Star",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Star.jpg"}
+},{
+    "name": "Triangle",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/shapes/Triangle.png"}
+}]

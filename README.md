@@ -1,3 +1,20 @@
+## Start the Database
+* create the database with below script.
+* Login in the database using root credential 
+  * username: root
+  * password: P@ssw0rd
+```
+// create database
+create database tapnlearn;
+CREATE USER 'tapnlearnadmin'@'%' IDENTIFIED BY 'P@ssw0rd';
+GRANT ALL PRIVILEGES ON tapnlearn.* TO 'tapnlearnadmin'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
+* Login in the database using tapnlearnadmin credential
+  * username: tapnlearnadmin
+  * password: P@ssw0rd
+* use startup scripts to create sql objects. 
+* 
 **Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
 
 When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.

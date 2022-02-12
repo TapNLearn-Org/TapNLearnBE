@@ -1,0 +1,55 @@
+[{
+    "name": "Dog",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Dog.jpg"}
+},{
+    "name": "Cat",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Cat.jpg"}
+},{
+    "name": "Cow",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/cow.jpg"}
+},{
+    "name": "Horse",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Horse.jpg"}
+},{
+    "name": "Buffalo",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Buffalo.jpg"}
+},{
+    "name": "Ox",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/ox.jpg"}
+},{
+    "name": "Elephant",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Elephant.jpg"}
+},{
+    "name": "Chicken",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Chicken.jpg"}
+},{
+    "name": "Tiger",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Tiger.jpg"}
+},{
+    "name": "Lion",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Lion.jpg"}
+},{
+    "name": "Bear",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/bear.jpg"}
+},{
+    "name": "Wolf",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Wolf.jpg"}
+},{
+    "name": "Fox",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Fox.jpg"}
+},{
+    "name": "Giraffe",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/Giraffe.webp"}
+},{
+    "name": "Panda",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/panda.jpg"}
+},{
+    "name": "Rabbit",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/rabbit.jpg"}
+},{
+    "name": "Rhino",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/rihno.jpg"}
+},{
+    "name": "Snake",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/animals/snake.png"}
+}]

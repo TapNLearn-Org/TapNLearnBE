@@ -1,0 +1,22 @@
+[{
+    "name": "Apple",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/fruits/Apple.jpg"}
+},{
+    "name": "Grapes",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/fruits/Grapes.jpg"}
+},{
+    "name": "Guava",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/fruits/Guava.jpg"}
+},{
+    "name": "Kiwi",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/fruits/Kiwi.jpg"}
+},{
+    "name": "Mango",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/fruits/Mango.jpg"}
+},{
+    "name": "Melon",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/fruits/Melon.jpg"}
+},{
+    "name": "Orange",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/fruits/Orange.jpg"}
+}]

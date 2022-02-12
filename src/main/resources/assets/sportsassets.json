@@ -1,0 +1,22 @@
+[{
+    "name": "Basketball",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/sports/basketball.jpg"}
+},{
+    "name": "Cycling",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/sports/Cycling.webp"}
+},{
+    "name": "Cricket",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/sports/Cricket.jpg"}
+},{
+    "name": "Football",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/sports/Football.webp"}
+},{
+    "name": "Skating",
+        "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/sports/Skating.webp"}
+},{
+    "name": "Swimming",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/sports/swimming.jpg"}
+},{
+    "name": "Table Tennis",
+    "image": {"uri": "https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/sports/tableTennis.jpg"}
+}]
