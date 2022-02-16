@@ -1,9 +1,12 @@
 package com.amankachhal.tapnlearn.tapnlearnbe.model.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Data
 @Table(name = "category", schema = "tapnlearn", catalog = "")
 public class CategoryEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)

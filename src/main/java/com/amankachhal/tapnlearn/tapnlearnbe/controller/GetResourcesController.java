@@ -1,39 +1,33 @@
 package com.amankachhal.tapnlearn.tapnlearnbe.controller;
 
+import com.amankachhal.tapnlearn.tapnlearnbe.model.Category;
 import com.amankachhal.tapnlearn.tapnlearnbe.model.ResourceDetails;
-import com.amankachhal.tapnlearn.tapnlearnbe.model.ResourceDetailsList;
-import com.amankachhal.tapnlearn.tapnlearnbe.model.Uri;
 import com.amankachhal.tapnlearn.tapnlearnbe.service.GetResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/resources")
+@RequestMapping(path = "/")
 public class GetResourcesController {
 
     @Autowired
     GetResourceService resourceService;
 
-    @GetMapping(path="", produces = "application/json")
-    public ResourceDetailsList getResources(@RequestParam("resourceFor") Integer resourceFor) throws IOException {
-        ResourceDetailsList resourceDetailsList = resourceService.getResourceList(resourceFor);
+    @GetMapping(path="resources", produces = "application/json")
+    public List<ResourceDetails> getResources(@RequestParam("categoryId") Integer categoryId) {
+        List<ResourceDetails> resourceDetailsList = resourceService.getResourceList(categoryId);
         return resourceDetailsList;
     }
-
-    private ResourceDetailsList populate(){
-        ResourceDetailsList resource = new ResourceDetailsList();
-
-        List<ResourceDetails> resourceDetailsList = new ArrayList<ResourceDetails>();
-        ResourceDetails resourceDetails = new ResourceDetails();
-        resourceDetails.setName("Boy");
-        resourceDetails.setImagePath(new Uri("https://tapnlearnresources.s3.ap-southeast-1.amazonaws.com/pictures/people/Boy.jpg"));
-        resourceDetailsList.add(resourceDetails);
-        resource.setResourceDetailsList(resourceDetailsList);
-        return resource;
+    @GetMapping(path="category", produces = "application/json")
+    public List<Category> getCategory() {
+        List<Category> categoryList = resourceService.getAllCategories();
+        return categoryList;
     }
 
 /*
