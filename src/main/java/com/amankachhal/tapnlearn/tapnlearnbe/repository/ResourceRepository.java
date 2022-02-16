@@ -6,5 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface ResourceRepository extends JpaRepository<ResourceEntity, Integer> {
-    public List<ResourceEntity> getResourceEntityByCategoryIdAndIsDeletedFalse(int categoryId);
+    public List<ResourceEntity> getResourceEntityByCategoryIdAndIsDeletedFalse(Integer categoryId);
+    public List<ResourceEntity> getResourceEntityByCategoryIdAndSubCategoryIdAndIsDeletedFalse(Integer categoryId, Integer subCategoryId);
 }

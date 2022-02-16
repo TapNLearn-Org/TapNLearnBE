@@ -5,13 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Category {
+public class ResourceCategoryResponse {
 
-    @JsonProperty("categoryId")
-    Integer categoryId;
-    @JsonProperty("name")
-    String name;
+    @JsonProperty("subCategoryList")
+    List<SubCategory> subCategoryList;
+    @JsonProperty("resourceDetailsList")
+    List<ResourceDetails> resourceDetailsList;
 }

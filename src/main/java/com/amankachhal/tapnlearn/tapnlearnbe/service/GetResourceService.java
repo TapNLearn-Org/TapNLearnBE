@@ -2,6 +2,7 @@ package com.amankachhal.tapnlearn.tapnlearnbe.service;
 
 import com.amankachhal.tapnlearn.tapnlearnbe.model.Category;
 import com.amankachhal.tapnlearn.tapnlearnbe.model.ResourceDetails;
+import com.amankachhal.tapnlearn.tapnlearnbe.model.SubCategory;
 import com.amankachhal.tapnlearn.tapnlearnbe.model.Uri;
 import com.amankachhal.tapnlearn.tapnlearnbe.model.entity.CategoryEntity;
 import com.amankachhal.tapnlearn.tapnlearnbe.model.entity.ResourceEntity;
@@ -32,15 +33,17 @@ public class GetResourceService {
         List<CategoryEntity> categoryEntityList = categoryRepository.findAll();
         return mapCategoryEntity2Category(categoryEntityList);
     }
-    public List<SubCategoryEntity> getSubCategoryByCategory(int categoryId){
-        return subCategoryRepository.getSubCategoryEntityByCategoryId(categoryId);
-    }
-    public List<ResourceEntity> getResourceByCategory(int categoryId){
-        return resourceRepository.getResourceEntityByCategoryIdAndIsDeletedFalse(categoryId);
+    public List<SubCategory> getSubCategoryByCategory(int categoryId){
+        List<SubCategoryEntity> subCategoryEntityList = subCategoryRepository.getSubCategoryEntityByCategoryId(categoryId);
+        return mapSubCategoryEntity2SubCategory(subCategoryEntityList);
     }
 
-    public List<ResourceDetails> getResourceList(int categoryId) {
-        List<ResourceEntity> resourceEntityList = getResourceByCategory(categoryId);
+    public List<ResourceDetails> getResourceList(Integer categoryId, Integer subCategoryId) {
+        List<ResourceEntity> resourceEntityList;
+        if (subCategoryId == null || subCategoryId == 0)
+            resourceEntityList = resourceRepository.getResourceEntityByCategoryIdAndIsDeletedFalse(categoryId);
+        else
+            resourceEntityList = resourceRepository.getResourceEntityByCategoryIdAndSubCategoryIdAndIsDeletedFalse(categoryId, subCategoryId);
         return mapResourceEntity2ResourceDetails(resourceEntityList);
     }
     private List<ResourceDetails> mapResourceEntity2ResourceDetails(List<ResourceEntity> resourceEntityList){
@@ -57,11 +60,21 @@ public class GetResourceService {
         List<Category> categoryList = new ArrayList<Category>();
         for(CategoryEntity categoryEntity : categoryEntityList){
             Category category = new Category();
-            category.setId(categoryEntity.getCategoryId());
+            category.setCategoryId(categoryEntity.getCategoryId());
             category.setName(categoryEntity.getName());
             categoryList.add(category);
-//            break;
         }
         return categoryList;
+    }
+    private List<SubCategory> mapSubCategoryEntity2SubCategory(List<SubCategoryEntity> subCategoryEntityList){
+        List<SubCategory> subCategoryList = new ArrayList<SubCategory>();
+        for(SubCategoryEntity subCategoryEntity : subCategoryEntityList){
+            SubCategory subCategory = new SubCategory();
+            subCategory.setSubCategoryId(subCategoryEntity.getSubCategoryId());
+            subCategory.setCategoryId(subCategoryEntity.getCategoryId());
+            subCategory.setName(subCategoryEntity.getName());
+            subCategoryList.add(subCategory);
+        }
+        return subCategoryList;
     }
 }

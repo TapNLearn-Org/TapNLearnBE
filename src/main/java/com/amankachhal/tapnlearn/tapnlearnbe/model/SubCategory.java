@@ -8,8 +8,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Category {
+public class SubCategory {
 
+    @JsonProperty("subCategoryId")
+    Integer subCategoryId;
     @JsonProperty("categoryId")
     Integer categoryId;
     @JsonProperty("name")
