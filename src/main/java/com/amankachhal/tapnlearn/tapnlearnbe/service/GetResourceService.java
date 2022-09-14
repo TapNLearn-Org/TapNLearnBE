@@ -1,5 +1,6 @@
 package com.amankachhal.tapnlearn.tapnlearnbe.service;
 
+import com.amankachhal.tapnlearn.tapnlearnbe.Utility;
 import com.amankachhal.tapnlearn.tapnlearnbe.model.Category;
 import com.amankachhal.tapnlearn.tapnlearnbe.model.ResourceDetails;
 import com.amankachhal.tapnlearn.tapnlearnbe.model.SubCategory;
@@ -51,7 +52,8 @@ public class GetResourceService {
         for(ResourceEntity resourceEntity : resourceEntityList){
             ResourceDetails resourceDetails = new ResourceDetails();
             resourceDetails.setName(resourceEntity.getName());
-            resourceDetails.setImagePath(new Uri(awsS3PicturePath+resourceEntity.getPictureEntityList().get(0).getPicturePath()));
+            int randomPictureIndex = Utility.genRandomInt(0, resourceEntity.getPictureEntityList().size()-1);
+            resourceDetails.setImagePath(new Uri(awsS3PicturePath+resourceEntity.getPictureEntityList().get(randomPictureIndex).getPicturePath()));
             resourceDetailsList.add(resourceDetails);
         }
         return resourceDetailsList;

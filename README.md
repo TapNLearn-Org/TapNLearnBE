@@ -13,7 +13,9 @@ FLUSH PRIVILEGES;
 * Login in the database using tapnlearnadmin credential
   * username: tapnlearnadmin
   * password: P@ssw0rd
-* use startup scripts to create sql objects. 
+* use startup scripts to create sql objects.
+## Git Repository
+* link to front end and back end repo https://bitbucket.org/amankachhal99/workspace/projects/TAP
 * 
 **Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
 

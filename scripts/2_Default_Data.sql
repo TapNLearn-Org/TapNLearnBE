@@ -65,3 +65,10 @@ INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) V
 INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) VALUES (21, 'activity/Hiking.jpg', DEFAULT);
 INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) VALUES (22, 'activity/Running.jpg', DEFAULT);
 INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) VALUES (23, 'activity/Swimming.jpg', DEFAULT);
+INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) VALUES (1, 'animals/Bear1.jpg', DEFAULT);
+INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) VALUES (1, 'animals/Bear2.jpg', DEFAULT);
+INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) VALUES (1, 'animals/Bear3.jpg', DEFAULT);
+INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) VALUES (1, 'animals/Bear4.jpg', DEFAULT);
+INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) VALUES (1, 'animals/Bear5.jpg', DEFAULT);
+INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) VALUES (1, 'animals/Bear6.jpg', DEFAULT);
+INSERT INTO tapnlearn.resource_picture (resource_id, picture_path, is_deleted) VALUES (1, 'animals/Bear7.jpg', DEFAULT);
