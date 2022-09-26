@@ -1,4 +1,84 @@
-## Start the Database
+# TapNLearn
+This is a project created for first step learning of kids. This project has 2 modules:
+1. tapnlearnbe
+   1. This module exposes the api that are consumed by tapnlearn module to display the functionality.
+2. tapnlearn 
+   1. This module is the frontend of the application. It is written in react native. Always remember this project is in React Native. So look for solutions only with react native libraries.
+
+## Environment Settings
+Following will be the working mechanism for developing the project.
+1. For **Dev** Env:
+   1. if a person is working **only on tapnlearnbe** project
+      1. Database: To be installed in local machine, initialization will be done by liquibase.
+      2. Static Content: Will be setup in Dev Env in AWS Account. 
+      3. API will be called/tested using localhost url. 
+   2. if a person is working **only on tapnlearn** project
+      1. **Backend API** will be called from expo client using the **release env** endpoint.
+      2. expo server will have to be started on local machine to do dev and testing.
+      3. expo client needs to be installed on the phone to call the local server.
+   3. if a person is working on **both tapnlearnbe and tapnlearn** project
+      1. Database: To be installed in local machine, initialization will be done by liquibase.
+      2. Static Content: Will be setup in Dev Env in AWS Account.
+      3. API will be called/tested using localhost url.
+      4. **Backend API** will be called from expo client using the **localhost env** endpoint.
+      5. expo server will have to be started on local machine to do dev and testing.
+      6. expo client needs to be installed on the phone to call the local server.
+2. For **Release** Env:
+   1. tapnlearnbe:
+      1. spring boot will be installed on lambda function.
+      2. swagger will be installed in the api gateway.
+      3. it will connect to mysql db in aws.
+   2. tapnlearn
+      1. will be packaged and uploaded to expo-website.
+      2. it has to be downloaded from there and installed on mobile to do testing. 
+3. For **PROD** Env:
+   1. tapnlearnbe:
+       1. spring boot will be installed on lambda function.
+       2. swagger will be installed in the api gateway.
+       3. it will connect to mysql db in aws.
+   2. tapnlearn
+       1. will be packaged and uploaded to expo-website.
+       2. it has to be downloaded from there and installed on mobile to do testing.
+
+## GIT Branching Strategy
+Follow following guidelines to commit code to the repository of back-end and front-end project.
+1. Always create a feature branch from **develop** branch.
+2. Naming convention of the feature branch will be **"feature/[base branch eg. develop]/[JIRA No.]"** eg. feature/develop/TAP-1
+3. Jira ticket number can be get from https://amankachhal.atlassian.net/jira/software/projects/TAP/boards/1/backlog
+4. create a pull request from develop to release and from release to master. 
+5. if all is not to be merged to release or master branch then create a feature branch from it and then check-in the code and create pull request.
+6. All the comments should follow the format **"[JIRA No.] Details about changes"** example [TAP-16] added the documentation about project.
+
+## tapnlearn Front-End Project Setup
+### Checkout the code.
+Execute the following command to checkout the code and install library.
+```
+git clone https://github.com/TapNLearn-Org/TapNLearn.git
+npm install @react-navigation/native
+expo install react-native-screens react-native-safe-area-context
+```
+### Deploy to Android Play Store
+* Update the version of the app in app.json -> version & app.json -> android -> versionCode.
+* Build the application using command expo build:android -t app-bundle
+* download the latest build from https://expo.dev/accounts/aman.kachhal99/projects/TapNLearn/builds
+* Go to https://play.google.com/console/u/0/developers/6668536516142373952/app/4972841234965412753/tracks/production to create a new release to android play store.
+* Upload the information and build and Review Release and Start Rollout.
+
+## Package to Android ABB
+* expo build:android -t apk
+* expo login
+
+## tapnlearnbe Back-end Project Setup
+### Checkout the code.
+Execute the following command to checkout the code.
+```
+git clone https://github.com/TapNLearn-Org/TapNLearnBE.git
+```
+
+### Start with AWS
+* Create root account in AWS. 
+
+### Start the Database on local machine.
 * create the database with below script.
 * Login in the database using root credential 
   * username: root
@@ -14,51 +94,3 @@ FLUSH PRIVILEGES;
   * username: tapnlearnadmin
   * password: P@ssw0rd
 * use startup scripts to create sql objects.
-## Git Repository
-* link to front end and back end repo https://bitbucket.org/amankachhal99/workspace/projects/TAP
-* 
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
-
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
-
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
-
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
-
----
-
-## Create a file
-
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
